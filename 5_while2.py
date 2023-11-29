@@ -15,13 +15,23 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {
+    "Как дела?": "Хорошо!",
+    "Что делаешь?": "Программирую",
+    "Какие планы?": "Отдыхать!",
+}
+
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+    while True:
+        question = input("Задай свой вопрос ")
+        if question in answers_dict:
+            print(answers_dict.get(question))
+            # break - если необходимо закнчить вопрос после того, как найден ответ в словаре
+
+        else:
+            print(f"Спроси другой вопрос. Ответ на этот я не знаю:(")
+
+
 if __name__ == "__main__":
     ask_user(questions_and_answers)
