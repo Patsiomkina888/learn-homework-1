@@ -27,8 +27,8 @@ def ask_user(answers_dict):
         question = input("Задай свой вопрос ")
         if question in answers_dict:
             print(answers_dict.get(question))
-            # break - если необходимо закнчить вопрос после того, как найден ответ в словаре
-
+            # break - необходимо закнчить вопрос после того, как найден ответ в словаре
+            break
         else:
             print(f"Спроси другой вопрос. Ответ на этот я не знаю:(")
 

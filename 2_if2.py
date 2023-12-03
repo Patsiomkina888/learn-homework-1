@@ -17,19 +17,32 @@
 
 
 def two_strings(str1, str2):
-    if isinstance(str1, str) and isinstance(str2, str):
-        if str1 == str2:
-            return 1
-        elif str1 != str2:
-            if str2 == "learn":
-                return 3
-            elif len(str1) > len(str2):
-                return 2
-            else:
-                return 0
+    # if isinstance(str1, str) and isinstance(str2, str):
+    #     if str1 == str2:
+    #         return 1
+    #     elif str1 != str2:
+    #         if str2 == "learn":
+    #             return 3
+    #         elif len(str1) > len(str2):
+    #             return 2
+    #         else:
+    #             return 0
 
-    else:
+    # else:
+    #     return 0
+
+    if not (isinstance(str1, str) and isinstance(str2, str)):
         return 0
+
+    if str1 == str2:
+        return 1
+    elif str1 != str2:
+        if str2 == "learn":
+            return 3
+        elif len(str1) > len(str2):
+            return 2
+        else:
+            return 0
 
 
 if __name__ == "__main__":

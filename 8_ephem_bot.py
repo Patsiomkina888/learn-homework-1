@@ -51,8 +51,12 @@ def talk_to_me(update, context):
 def planet_constellation(update, context):
     user_text = update.message.text  # например, user_text = Mars
     command_and_planet_list = user_text.split()
+    try:
+        planet_name = command_and_planet_list[1].lower()
+    except IndexError:
+        update.message.reply_text(f"{user_text} содержит невалидное название планеты")
+        return
 
-    planet_name = command_and_planet_list[1].lower()
     logging.info("earth", dir(ephem))
     planet = ""
     planet_dict = {

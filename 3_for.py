@@ -20,8 +20,7 @@
 phone_sales = [
     {
         "product": "iPhone 12",
-        # "items_sold": [363, 500, 224, 358, 480, 476, 470, 216, 270, 388, 312, 186],
-        "items_sold": [363, 500],
+        "items_sold": [363, 500, 224, 358, 480, 476, 470, 216, 270, 388, 312, 186],
     },
     {
         "product": "Xiaomi Mi11",
@@ -29,38 +28,21 @@ phone_sales = [
     },
     {
         "product": "Samsung Galaxy 21",
-        "items_sold": [343, 390]
-        # "items_sold": [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247],
+        # "items_sold": [343, 390]
+        "items_sold": [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247],
     },
 ]
 
-# total_sum = 0
-# for item in phone_sales:
-#     item_sum = 0
 
-#     for quantity in item["items_sold"]:
-#         item_sum += quantity
-#     item_avg = round(item_sum / len(item["items_sold"]), 2)
-
-#     print(f'Суммарное количество продаж для {item["product"]} составляет {item_sum}')
-#     item_avg = round(item_sum / len(item["items_sold"]), 2)
-#     print(f'Среднее количество продаж для {item["product"]} составляет {item_avg}')
-
-#     total_sum += item_sum
-# print(f"Суммарное количество продаж составляет {total_sum}")
-# avg_total_sum = round(total_sum / len(phone_sales), 2)
-# print(f"Среднее количество продаж составляет {avg_total_sum}")
+def get_average(prouct_sum, list_of_items):
+    return round(prouct_sum / len(list_of_items), 2)
 
 
-def get_average(sum, list_of_items):
-    return round(sum / len(list_of_items), 2)
-
-
-def sum(list_of_numbers):
-    sum = 0
+def prouct_sum(list_of_numbers):
+    prouct_sum = 0
     for number in list_of_numbers:
-        sum += number
-    return sum
+        prouct_sum += number
+    return prouct_sum
 
 
 total_sum = 0
